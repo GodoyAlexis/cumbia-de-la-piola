@@ -12,6 +12,7 @@ Build the first coded version of the artist website, focused on music, shows, ar
 - [x] CDP-001 Create semantic page structure and artist-focused content.
 - [x] CDP-002 Implement responsive visual system and high-impact hero without external dependencies.
 - [x] CDP-003 Add lightweight interaction for navigation, playback affordance, and current-year footer.
+- [x] CDP-004 Integrate artist imagery from the official YouTube channel into the hero, banner, and music section.
 
 ## Acceptance criteria
 - Responsive desktop and mobile layout.
@@ -33,4 +34,7 @@ Build the first coded version of the artist website, focused on music, shows, ar
 - Feature document created before source implementation.
 - CDP-001 through CDP-003 implemented in one bounded writer task.
 - Verification evidence: `node --check script.js`, required sections/links, responsive rules, interaction hooks, merch exclusion, internal targets, and dependency-free source checks passed. Browser preview remains pending because no browser runner is configured in the repository.
-- Next step: replace provisional platform/contact destinations with official artist links and audio assets, then perform a browser preview.
+- CDP-004 implementation: photographic hero using `assets/artist-avatar.jpg`; linked YouTube channel banner using the Club Deportivo Morón thumbnail; three accessible video cards linking to their official YouTube videos; all six supplied assets copied into `dist/assets/`. Source and dist HTML/CSS/JS are byte-identical.
+- CDP-004 checks: `node --check script.js` passed; structural checks passed for hero image and alt text, official channel banner, three linked gallery cards with alt text, mobile horizontal gallery behavior, and merch exclusion; all three dist source files matched byte-for-byte and all six dist assets matched their source assets by SHA-256.
+- Browser preview remains pending because no browser runner is configured in the repository.
+- Next step: parent review, then browser preview when a browser runner is available.
