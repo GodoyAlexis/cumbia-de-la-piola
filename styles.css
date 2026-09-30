@@ -59,9 +59,9 @@ button { color: inherit; font: inherit; }
 .channel-banner__label strong span { color: var(--red); }
 .section-dark { background: var(--ink); color: var(--paper); }
 .music { padding: 100px 11vw 74px; }
-.section-heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 50px; }
+.section-heading { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: end; column-gap: 32px; row-gap: 16px; margin-bottom: 50px; }
 .eyebrow--light { color: #aaa49a; }
-.section-heading .eyebrow { position: absolute; transform: translateY(-60px); }
+.section-heading .eyebrow { grid-column: 1 / -1; position: static; transform: none; margin: 0; }
 .section-heading h2, .shows h2 { font-size: clamp(57px, 7.8vw, 104px); line-height: .85; }
 .accent { color: var(--red); }
 .section-heading__aside { margin: 0 5% 5px 0; color: #aaa49a; font-size: 13px; line-height: 1.6; }
@@ -74,6 +74,9 @@ button { color: inherit; font: inherit; }
 .release-info__label { margin: 0 0 11px; color: #aaa49a; font: 10px var(--font-mono); letter-spacing: .07em; }
 .release-info h3 { margin: 0 0 8px; font-size: clamp(21px, 2.5vw, 31px); letter-spacing: -.06em; }
 .release-info > p:not(.release-info__label) { color: #aaa49a; margin: 0; font-size: 12px; line-height: 1.6; }
+.release-info__link { display: inline-flex; align-items: center; gap: 7px; margin-top: 14px; color: var(--paper); font-size: 11px; font-weight: 700; text-decoration: underline; text-decoration-color: #625e56; text-underline-offset: 4px; }
+.release-info__link:hover, .release-info__link:focus-visible { text-decoration-color: var(--red); }
+.release-info__link span { color: var(--red); }
 .release-info__actions { display: flex; align-items: center; gap: 13px; margin-top: 24px; }
 .play-button { display: inline-flex; align-items: center; gap: 10px; border: 0; background: var(--red); color: white; padding: 11px 14px; cursor: pointer; font-size: 11px; font-weight: 700; }
 .play-button__icon { font-size: 10px; }
@@ -129,6 +132,8 @@ button { color: inherit; font: inherit; }
   .hero-art { width: 46vw; }
   .hero h1 { font-size: clamp(72px, 10vw, 105px); }
   .music, .shows, .booking { padding-inline: 7vw; }
+  .section-heading { column-gap: 20px; }
+  .section-heading__aside { margin-right: 0; }
   .release-card { grid-template-columns: 150px minmax(0, 1fr); }
   .waveform { grid-column: 1 / -1; min-height: 52px; }
   .site-footer { padding-inline: 5vw; grid-template-columns: 1fr 1fr; row-gap: 22px; }
@@ -165,7 +170,7 @@ button { color: inherit; font: inherit; }
   .channel-banner__label > span { font-size: 8px; }
   .music { padding: 77px 21px 52px; }
   .section-heading { display: block; margin-bottom: 34px; }
-  .section-heading .eyebrow { position: static; transform: none; margin-bottom: 27px; }
+  .section-heading .eyebrow { margin-bottom: 22px; }
   .section-heading h2, .shows h2 { font-size: clamp(58px, 14vw, 82px); }
   .section-heading__aside { margin: 18px 0 0; font-size: 12px; }
   .release-card { grid-template-columns: 94px minmax(0, 1fr); gap: 17px; padding: 15px; }
