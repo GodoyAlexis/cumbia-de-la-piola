@@ -18,18 +18,29 @@ if (menuToggle && primaryNav) {
   });
 }
 
-const releaseCard = document.querySelector('.release-card');
-const playToggle = document.querySelector('[data-play-toggle]');
-const playLabel = document.querySelector('[data-play-label]');
-const playStatus = document.querySelector('[data-play-status]');
+const trackOptions = document.querySelectorAll('[data-track-option]');
+const trackLabel = document.querySelector('[data-track-label]');
+const trackTitle = document.querySelector('[data-track-title]');
+const trackLink = document.querySelector('[data-track-link]');
+const trackLinkLabel = document.querySelector('[data-track-link-label]');
+const trackStatus = document.querySelector('[data-track-status]');
 
-if (releaseCard && playToggle && playLabel && playStatus) {
-  playToggle.addEventListener('click', () => {
-    const isPlaying = playToggle.getAttribute('aria-pressed') === 'true';
-    playToggle.setAttribute('aria-pressed', String(!isPlaying));
-    releaseCard.classList.toggle('is-playing', !isPlaying);
-    playLabel.textContent = isPlaying ? 'Escuchar' : 'Pausar muestra';
-    playStatus.textContent = isPlaying ? 'Muestra visual' : 'Animación activa · sin audio';
+if (trackOptions.length && trackLabel && trackTitle && trackLink && trackLinkLabel && trackStatus) {
+  trackOptions.forEach((option) => {
+    option.addEventListener('click', () => {
+      const { trackTitle: title, trackLabel: label, trackUrl: url } = option.dataset;
+
+      trackOptions.forEach((trackOption) => {
+        trackOption.setAttribute('aria-pressed', String(trackOption === option));
+      });
+
+      trackTitle.textContent = title;
+      trackLabel.textContent = label;
+      trackLink.href = url;
+      trackLink.setAttribute('aria-label', `Escuchar ${title} en YouTube (se abre en una pestaña nueva)`);
+      trackLinkLabel.textContent = `Escuchar ${title}`;
+      trackStatus.textContent = `${title} seleccionada. La forma de onda es visual; no reproduce audio en esta página.`;
+    });
   });
 }
 

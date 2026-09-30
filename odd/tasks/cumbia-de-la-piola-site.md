@@ -14,6 +14,7 @@ Build the first coded version of the artist website, focused on music, shows, ar
 - [x] CDP-003 Add lightweight interaction for navigation, playback affordance, and current-year footer.
 - [x] CDP-004 Integrate artist imagery from the official YouTube channel into the hero, banner, and music section.
 - [x] CDP-005 Fix music section hierarchy and add actionable track links.
+- [x] CDP-006 Add an accessible selectable track list that opens the selected official YouTube track; sync root assets to `dist`.
 
 ## Acceptance criteria
 - Responsive desktop and mobile layout.
@@ -41,4 +42,8 @@ Build the first coded version of the artist website, focused on music, shows, ar
 - CDP-005 implementation: kept the music eyebrow in normal flow above the title and supporting copy using a responsive grid; stacked the heading on mobile. Added a clearly named official YouTube CTA for the featured release and accessible names for all three external track links.
 - CDP-005 checks: `node --check script.js` passed; all PowerShell structural checks passed for labelled music heading hierarchy, in-flow heading rules, four accessible external YouTube links, tablet/mobile breakpoints and mobile stacking, and merch/checkout exclusion.
 - CDP-005 browser preview: unavailable; no configured browser runner or browser command was found.
+- CDP-006 implementation: replaced the simulated play/pause control with three compact native track-selection buttons. Selection updates the featured title, numbered video label, and “Escuchar” YouTube link; the link opens the selected official URL in a new tab. `aria-pressed` identifies the selection, a polite live region announces it, and selecting a track leaves keyboard focus on its button. The waveform is static and explicitly described as visual-only; no in-page audio playback is claimed or implemented.
+- CDP-006 verification: `node --check script.js` passed (exit code 0). PowerShell structural checks passed for all three exact official URLs, selected-track wiring, accessibility/focus, responsive styles, SHA-256 parity for all three root/dist files, merch exclusion, existing platform links, and honest waveform behavior. `git diff --check` passed (exit code 0; Git emitted only LF-to-CRLF normalization warnings). Browser preview was not run and no browser-console result is claimed.
+- CDP-006 deployment parity: `index.html`, `styles.css`, and `script.js` are byte-identical to their `dist/` counterparts.
+- CDP-006 delivery: committed in a71805f on the feature branch.
 - Next step: parent review; optional browser preview when a configured runner is available.
