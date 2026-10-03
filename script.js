@@ -46,3 +46,24 @@ if (trackOptions.length && trackLabel && trackTitle && trackLink && trackLinkLab
 
 const year = document.querySelector('[data-year]');
 if (year) year.textContent = String(new Date().getFullYear());
+
+const featuredVideo = document.querySelector('[data-video-play]');
+
+if (featuredVideo) {
+  featuredVideo.addEventListener('click', (event) => {
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+
+    const player = document.createElement('div');
+    player.className = 'video-banner__player';
+    const iframe = document.createElement('iframe');
+    iframe.src = 'https://www.youtube-nocookie.com/embed/35O9geyC5rw?autoplay=1&playsinline=1&rel=0';
+    iframe.title = 'Video destacado de Cumbia de la Piola';
+    iframe.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    iframe.allowFullscreen = true;
+    iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+    player.append(iframe);
+    featuredVideo.replaceWith(player);
+    iframe.focus();
+  });
+}

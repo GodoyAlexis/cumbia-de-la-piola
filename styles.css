@@ -115,6 +115,7 @@ button { color: inherit; font: inherit; }
 .video-banner__player:hover .video-banner__play, .video-banner__player:focus-visible .video-banner__play { background: #ff493c; transform: translate(-50%, -50%) scale(1.08); }
 .video-banner__footer { bottom: 7%; }
 .video-banner__footer span:last-child { color: white; font-weight: 700; }
+.video-banner__player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
 .video-banner__player:focus-visible { outline: 2px solid var(--red); outline-offset: 5px; }
 .shows { padding: 78px 11vw 27px; border-top: 1px solid #484640; }
 .shows__topline, .shows__footer { display: flex; justify-content: space-between; align-items: center; }
