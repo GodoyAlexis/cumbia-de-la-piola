@@ -18,32 +18,6 @@ if (menuToggle && primaryNav) {
   });
 }
 
-const trackOptions = document.querySelectorAll('[data-track-option]');
-const trackLabel = document.querySelector('[data-track-label]');
-const trackTitle = document.querySelector('[data-track-title]');
-const trackLink = document.querySelector('[data-track-link]');
-const trackLinkLabel = document.querySelector('[data-track-link-label]');
-const trackStatus = document.querySelector('[data-track-status]');
-
-if (trackOptions.length && trackLabel && trackTitle && trackLink && trackLinkLabel && trackStatus) {
-  trackOptions.forEach((option) => {
-    option.addEventListener('click', () => {
-      const { trackTitle: title, trackLabel: label, trackUrl: url } = option.dataset;
-
-      trackOptions.forEach((trackOption) => {
-        trackOption.setAttribute('aria-pressed', String(trackOption === option));
-      });
-
-      trackTitle.textContent = title;
-      trackLabel.textContent = label;
-      trackLink.href = url;
-      trackLink.setAttribute('aria-label', `Escuchar ${title} en YouTube (se abre en una pestaña nueva)`);
-      trackLinkLabel.textContent = `Escuchar ${title}`;
-      trackStatus.textContent = `${title} seleccionada. La forma de onda es visual; no reproduce audio en esta página.`;
-    });
-  });
-}
-
 const year = document.querySelector('[data-year]');
 if (year) year.textContent = String(new Date().getFullYear());
 
