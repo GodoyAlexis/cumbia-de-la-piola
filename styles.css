@@ -289,6 +289,8 @@ body { background: #080808; }
 @media (min-width: 901px) {
   .site-footer { position: relative; }
   .site-footer .social-links { position: absolute; left: 50%; transform: translateX(-50%); justify-content: center; }
+  .site-footer .copyright { grid-column: 4; grid-row: 1; justify-self: end; }
+  .site-footer .creator-credit { grid-column: 4; grid-row: 2; justify-self: end; text-align: right; }
 }
 @media (max-width: 900px) {
   .site-footer { align-items: start; }
