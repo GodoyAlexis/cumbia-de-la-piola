@@ -241,3 +241,19 @@ button { color: inherit; font: inherit; }
     box-shadow: 0 16px 28px rgba(0, 0, 0, .2);
   }
 }
+
+/* Dark surfaces across the page, with brighter controls and readable secondary text. */
+:root { color-scheme: dark; --muted: #b8b8b8; --line: rgba(255,255,255,.18); }
+body { background: #080808; }
+.hero { color: #f5f5f5; background: radial-gradient(ellipse at 75% 25%, #242424, transparent 65%), linear-gradient(135deg, #101010, #050505); }
+.hero__intro, .hero__note { color: #b8b8b8; }
+.hero .text-link { border-color: #777; }
+.hero .button--dark { background: #eee; color: #111; }
+.hero .button--dark:hover { background: #fff; }
+.hero a:focus-visible { outline: 2px solid #ff5a5a; outline-offset: 5px; }
+.section-dark { background: #080808; color: #f5f5f5; }
+.shows { background: linear-gradient(150deg, #151515, #080808); }
+.booking { color: #f5f5f5; background: radial-gradient(ellipse at 85% 50%, #272727, transparent 65%), linear-gradient(120deg, #101010, #050505); border-top: 1px solid #333; }
+.booking__copy > p:last-child { color: #b8b8b8; }
+.booking__shape, .booking__shape::before, .booking__shape::after { border-color: rgba(255,255,255,.12); }
+.booking .button:focus-visible { outline: 2px solid #fff; outline-offset: 5px; }
