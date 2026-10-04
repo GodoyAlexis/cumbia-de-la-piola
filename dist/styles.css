@@ -274,3 +274,4 @@ body { background: #080808; }
 .icon-credit a { text-decoration: underline; text-underline-offset: 3px; }
 .icon-diagonal { transform: rotate(-45deg); }
 .music-links a { display: inline-flex; align-items: center; gap: 7px; } .social-links .fi, .music-links .fi { font-size: 14px; }
+.creator-credit { grid-column: 1 / -1; margin: 0; color: #999; font: 9px var(--font-mono); letter-spacing: .02em; }
