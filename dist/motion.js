@@ -45,29 +45,22 @@
     document.addEventListener('focusin', revealFocused);
 
     const track = document.querySelector('.hero__ticker-track');
-    const pause = document.querySelector('[data-motion-pause]');
-    let userPaused = false;
+    const tickerWindow = document.querySelector('.hero__ticker-window');
+    let isHovering = false;
     const ticker = gsap.to(track, { xPercent: -50, duration: 22, repeat: -1, ease: 'none' });
     const tickerVisibility = ScrollTrigger.create({
       trigger: '.hero__ticker', start: 'top bottom', end: 'bottom top',
-      onToggle: self => { if (self.isActive && !userPaused) ticker.resume(); else ticker.pause(); }
+      onToggle: self => { if (self.isActive && !isHovering) ticker.resume(); else ticker.pause(); }
     });
-    pause.hidden = false;
-    const toggleTicker = () => {
-      userPaused = !userPaused;
-      if (userPaused) ticker.pause(); else if (tickerVisibility.isActive) ticker.resume();
-      pause.textContent = userPaused ? 'Reanudar' : 'Pausar';
-      pause.setAttribute('aria-label', userPaused ? 'Reanudar texto en movimiento' : 'Pausar texto en movimiento');
-      pause.setAttribute('aria-pressed', String(userPaused));
-    };
-    pause.addEventListener('click', toggleTicker);
+    const pauseOnHover = () => { isHovering = true; ticker.pause(); };
+    const resumeOnLeave = () => { isHovering = false; ticker.resume(); };
+    tickerWindow.addEventListener('mouseenter', pauseOnHover);
+    tickerWindow.addEventListener('mouseleave', resumeOnLeave);
     ScrollTrigger.refresh();
     return () => {
       document.removeEventListener('focusin', revealFocused);
-      pause.removeEventListener('click', toggleTicker);
-      pause.hidden = true;
-      pause.textContent = 'Pausar';
-      pause.setAttribute('aria-pressed', 'false');
+      tickerWindow.removeEventListener('mouseenter', pauseOnHover);
+      tickerWindow.removeEventListener('mouseleave', resumeOnLeave);
     };
   });
 })();

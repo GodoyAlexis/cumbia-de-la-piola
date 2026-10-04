@@ -200,9 +200,7 @@ button { color: inherit; font: inherit; }
 .hero__ticker-window { min-width: 0; flex: 1; overflow: hidden; }
 .hero__ticker-track { display: flex; width: max-content; }
 .hero__ticker-track > span { display: block !important; flex: 0 0 auto; white-space: nowrap; padding-right: 3em; }
-.motion-pause { border: 0; background: none; padding: 0; color: inherit; font: inherit; text-decoration: underline; cursor: pointer; }
-.motion-pause[hidden] { display: none; }
-.motion-pause:focus-visible, .media-card:focus-visible { outline: 2px solid var(--red); outline-offset: 5px; }
+.media-card:focus-visible { outline: 2px solid var(--red); outline-offset: 5px; }
 .media-card img { transition: filter .2s ease, transform .3s ease; }
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
   .media-card:hover img { transform: translateY(-4px); }
@@ -258,6 +256,44 @@ body { background: #080808; }
 .booking__shape, .booking__shape::before, .booking__shape::after { border-color: rgba(255,255,255,.12); }
 .booking .button:focus-visible { outline: 2px solid #fff; outline-offset: 5px; }
 
+/* Alternate the visual weight between sections while preserving reading order. */
+@media (min-width: 901px) {
+  .shows__content { grid-template-columns: .8fr 1fr; }
+  .shows__empty { order: 1; }
+  .shows__content h2 { order: 2; justify-self: end; }
+  .booking { flex-direction: row-reverse; }
+  .booking .button--red { margin-left: 0; }
+}
+
 /* Let the transparent logo sit directly on the dark surfaces. */
 .site-header .wordmark, .site-footer .wordmark { padding: 0; border-radius: 0; background: transparent; }
 .site-header .wordmark__logo, .site-footer .wordmark__logo { filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 1px rgba(255,255,255,.85)); }
+
+/* Flaticon Uicons: one visual language for actions and navigation. */
+.fi { display: inline-flex; align-items: center; justify-content: center; line-height: 1; flex-shrink: 0; }
+.video-banner__play > .fi { font-size: 30px; margin-left: 4px; }
+.menu-toggle .fi { font-size: 18px; }
+.menu-toggle .close-icon { display: none; }
+.menu-toggle[aria-expanded="true"] .menu-icon { display: none; }
+.menu-toggle[aria-expanded="true"] .close-icon { display: inline-flex; }
+.social-links a { display: inline-flex; align-items: center; gap: 7px; }
+.icon-credit { grid-column: 1 / -1; margin: 0; color: #b8b8b8; font: 9px var(--font-mono); }
+.icon-credit a { text-decoration: underline; text-underline-offset: 3px; }
+.icon-diagonal { transform: rotate(-45deg); }
+.music-links a { display: inline-flex; align-items: center; gap: 7px; } .social-links .fi, .music-links .fi { font-size: 14px; }
+.creator-credit { grid-column: 1 / -1; margin: 0; color: #999; font: 9px var(--font-mono); letter-spacing: .02em; }
+
+/* Keep the social row as a focal point on desktop and group footer metadata on mobile. */
+@media (min-width: 901px) {
+  .site-footer { position: relative; }
+  .site-footer .social-links { position: absolute; left: 50%; transform: translateX(-50%); justify-content: center; }
+  .site-footer .copyright { grid-column: 4; grid-row: 1; justify-self: end; }
+  .site-footer .creator-credit { grid-column: 4; grid-row: 2; justify-self: end; text-align: right; }
+}
+@media (max-width: 900px) {
+  .site-footer { align-items: start; }
+  .site-footer .wordmark { grid-column: 1; grid-row: 1 / span 3; align-self: start; }
+  .site-footer .social-links { grid-column: 2; grid-row: 1; justify-content: end; gap: 13px; }
+  .site-footer .copyright { grid-column: 2; grid-row: 2; justify-self: end; text-align: right; }
+  .site-footer .creator-credit { grid-column: 2; grid-row: 3; text-align: right; }
+}
