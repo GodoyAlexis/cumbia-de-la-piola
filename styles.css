@@ -258,6 +258,15 @@ body { background: #080808; }
 .booking__shape, .booking__shape::before, .booking__shape::after { border-color: rgba(255,255,255,.12); }
 .booking .button:focus-visible { outline: 2px solid #fff; outline-offset: 5px; }
 
+/* Alternate the visual weight between sections while preserving reading order. */
+@media (min-width: 901px) {
+  .shows__content { grid-template-columns: .8fr 1fr; }
+  .shows__empty { order: 1; }
+  .shows__content h2 { order: 2; justify-self: end; }
+  .booking { flex-direction: row-reverse; }
+  .booking .button--red { margin-left: 0; }
+}
+
 /* Let the transparent logo sit directly on the dark surfaces. */
 .site-header .wordmark, .site-footer .wordmark { padding: 0; border-radius: 0; background: transparent; }
 .site-header .wordmark__logo, .site-footer .wordmark__logo { filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 1px rgba(255,255,255,.85)); }
