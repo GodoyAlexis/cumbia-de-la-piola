@@ -261,3 +261,14 @@ body { background: #080808; }
 /* Let the transparent logo sit directly on the dark surfaces. */
 .site-header .wordmark, .site-footer .wordmark { padding: 0; border-radius: 0; background: transparent; }
 .site-header .wordmark__logo, .site-footer .wordmark__logo { filter: drop-shadow(0 0 1px #fff) drop-shadow(0 0 1px rgba(255,255,255,.85)); }
+
+/* Flaticon Uicons: one visual language for actions and navigation. */
+.fi { display: inline-flex; align-items: center; justify-content: center; line-height: 1; flex-shrink: 0; }
+.video-banner__play > .fi { font-size: 30px; margin-left: 4px; }
+.menu-toggle .fi { font-size: 18px; }
+.menu-toggle .close-icon { display: none; }
+.menu-toggle[aria-expanded="true"] .menu-icon { display: none; }
+.menu-toggle[aria-expanded="true"] .close-icon { display: inline-flex; }
+.social-links a { display: inline-flex; align-items: center; gap: 7px; }
+.icon-credit { grid-column: 1 / -1; margin: 0; color: #b8b8b8; font: 9px var(--font-mono); }
+.icon-credit a { text-decoration: underline; text-underline-offset: 3px; }
