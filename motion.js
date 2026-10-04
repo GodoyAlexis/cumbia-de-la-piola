@@ -35,7 +35,6 @@
     reveal('.video-banner__title, .video-banner__meta, .video-banner__footer', '.featured');
     reveal('.music .section-heading', '.music');
     document.querySelectorAll('.media-card').forEach(card => reveal(card, card));
-    reveal('.shows__topline, .shows__content > *', '.shows');
     reveal('.booking__copy, .booking .button', '.booking');
     const revealFocused = (event) => {
       reveals.forEach(({elements, tween}) => {
