@@ -208,16 +208,16 @@ button { color: inherit; font: inherit; }
   .media-card:hover img { transform: translateY(-4px); }
 }
 
-/* Dark framing with warm highlights that echo the red brand. */
+/* Duki-inspired black, graphite and white framing. */
 .site-header {
-  color: #f5eee5;
-  background: radial-gradient(ellipse at 0% 0%, #45201f 0%, transparent 58%), linear-gradient(110deg, #211c1d, #111113 75%);
-  border-bottom: 1px solid rgba(245, 238, 229, .14);
+  color: #ffffff;
+  background: radial-gradient(ellipse at 0% 0%, #252525 0%, transparent 58%), linear-gradient(110deg, #151515, #000000 75%);
+  border-bottom: 1px solid rgba(255, 255, 255, .14);
 }
 .site-footer {
-  color: #f5eee5;
-  background: radial-gradient(ellipse at 100% 100%, #45201f 0%, transparent 65%), linear-gradient(110deg, #111113, #211c1d);
-  border-top: 1px solid rgba(245, 238, 229, .14);
+  color: #ffffff;
+  background: radial-gradient(ellipse at 100% 100%, #252525 0%, transparent 65%), linear-gradient(110deg, #000000, #151515);
+  border-top: 1px solid rgba(255, 255, 255, .14);
 }
 .site-header .wordmark, .site-footer .wordmark {
   justify-self: start;
@@ -225,19 +225,19 @@ button { color: inherit; font: inherit; }
   border-radius: 8px;
   background: #efe9df;
 }
-.site-header .nav-social { border-color: rgba(245, 238, 229, .2); }
-.site-header .primary-nav a:hover, .site-footer .social-links a:hover { color: #ff9589; }
-.site-footer .footer-line, .site-footer .copyright { color: #c2b7b1; }
+.site-header .nav-social { border-color: rgba(255, 255, 255, .2); }
+.site-header .primary-nav a:hover, .site-footer .social-links a:hover { color: #ff5a5a; }
+.site-footer .footer-line, .site-footer .copyright { color: #b8b8b8; }
 .site-header a:focus-visible, .site-footer a:focus-visible, .site-header .menu-toggle:focus-visible {
-  outline: 2px solid #ff9589;
+  outline: 2px solid #ff5a5a;
   outline-offset: 5px;
 }
 @media (max-width: 620px) {
-  .site-header .menu-toggle { border-color: rgba(245, 238, 229, .35); border-radius: 5px; }
-  .site-header .menu-toggle span { background: #f5eee5; }
+  .site-header .menu-toggle { border-color: rgba(255, 255, 255, .35); border-radius: 5px; }
+  .site-header .menu-toggle span { background: #ffffff; }
   .site-header .primary-nav {
-    background: linear-gradient(145deg, #291d20, #111113);
-    border-color: rgba(245, 238, 229, .14);
+    background: linear-gradient(145deg, #181818, #000000);
+    border-color: rgba(255, 255, 255, .14);
     box-shadow: 0 16px 28px rgba(0, 0, 0, .2);
   }
 }
