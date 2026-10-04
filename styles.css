@@ -195,3 +195,15 @@ button { color: inherit; font: inherit; }
 
 .wordmark__logo { display: block; width: 116px; height: auto; }
 @media (max-width: 620px) { .wordmark__logo { width: 94px; } }
+
+.hero__ticker { min-width: 0; gap: 16px; align-items: start; }
+.hero__ticker-window { min-width: 0; flex: 1; overflow: hidden; }
+.hero__ticker-track { display: flex; width: max-content; }
+.hero__ticker-track > span { display: block !important; flex: 0 0 auto; white-space: nowrap; padding-right: 3em; }
+.motion-pause { border: 0; background: none; padding: 0; color: inherit; font: inherit; text-decoration: underline; cursor: pointer; }
+.motion-pause[hidden] { display: none; }
+.motion-pause:focus-visible, .media-card:focus-visible { outline: 2px solid var(--red); outline-offset: 5px; }
+.media-card img { transition: filter .2s ease, transform .3s ease; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .media-card:hover img { transform: translateY(-4px); }
+}
