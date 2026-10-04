@@ -53,7 +53,7 @@
       onToggle: self => { if (self.isActive && !isHovering) ticker.resume(); else ticker.pause(); }
     });
     const pauseOnHover = () => { isHovering = true; ticker.pause(); };
-    const resumeOnLeave = () => { isHovering = false; if (tickerVisibility.isActive) ticker.resume(); };
+    const resumeOnLeave = () => { isHovering = false; ticker.resume(); };
     tickerWindow.addEventListener('mouseenter', pauseOnHover);
     tickerWindow.addEventListener('mouseleave', resumeOnLeave);
     ScrollTrigger.refresh();
