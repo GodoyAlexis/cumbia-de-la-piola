@@ -284,3 +284,18 @@ body { background: #080808; }
 .icon-diagonal { transform: rotate(-45deg); }
 .music-links a { display: inline-flex; align-items: center; gap: 7px; } .social-links .fi, .music-links .fi { font-size: 14px; }
 .creator-credit { grid-column: 1 / -1; margin: 0; color: #999; font: 9px var(--font-mono); letter-spacing: .02em; }
+
+/* Keep the social row as a focal point on desktop and group footer metadata on mobile. */
+@media (min-width: 901px) {
+  .site-footer { position: relative; }
+  .site-footer .social-links { position: absolute; left: 50%; transform: translateX(-50%); justify-content: center; }
+  .site-footer .copyright { grid-column: 4; grid-row: 1; justify-self: end; }
+  .site-footer .creator-credit { grid-column: 4; grid-row: 2; justify-self: end; text-align: right; }
+}
+@media (max-width: 900px) {
+  .site-footer { align-items: start; }
+  .site-footer .wordmark { grid-column: 1; grid-row: 1 / span 3; align-self: start; }
+  .site-footer .social-links { grid-column: 2; grid-row: 1; justify-content: end; gap: 13px; }
+  .site-footer .copyright { grid-column: 2; grid-row: 2; justify-self: end; text-align: right; }
+  .site-footer .creator-credit { grid-column: 2; grid-row: 3; text-align: right; }
+}
