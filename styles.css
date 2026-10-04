@@ -19,8 +19,6 @@ button { color: inherit; font: inherit; }
 .skip-link:focus { transform: translateY(0); }
 .site-header { height: 88px; padding: 0 6.1vw; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--line); position: relative; z-index: 5; }
 .wordmark { display: inline-flex; align-items: center; gap: 11px; }
-.wordmark__mark { width: 38px; height: 38px; display: grid; place-items: center; background: var(--red); color: white; border-radius: 50%; font: 500 11px var(--font-mono); letter-spacing: -.08em; }
-.wordmark__name { font-size: 14px; font-weight: 700; line-height: 1.02; letter-spacing: -.04em; }
 .primary-nav { display: flex; align-items: center; gap: clamp(26px, 4vw, 62px); font-size: 13px; font-weight: 600; }
 .primary-nav a, .social-links a { transition: color .2s ease; }
 .primary-nav a:hover, .social-links a:hover { color: var(--red); }
@@ -106,7 +104,6 @@ button { color: inherit; font: inherit; }
 .booking__shape::before, .booking__shape::after { content: ''; position: absolute; inset: 11%; border: 1px solid rgba(23,23,21,.1); border-radius: 50%; }
 .booking__shape::after { inset: 23%; }
 .site-footer { min-height: 126px; padding: 27px 6.1vw; display: grid; grid-template-columns: 1fr 1fr 1.5fr auto; align-items: center; gap: 20px; background: var(--paper); }
-.wordmark--footer .wordmark__mark { background: var(--ink); }
 .footer-line { color: #746f68; font-size: 11px; }
 .social-links { display: flex; gap: 23px; font-size: 10px; font-weight: 600; }
 .copyright { color: #746f68; font: 9px var(--font-mono); white-space: nowrap; }
@@ -126,8 +123,6 @@ button { color: inherit; font: inherit; }
 }
 @media (max-width: 620px) {
   .site-header { height: 72px; padding-inline: 21px; }
-  .wordmark__mark { width: 34px; height: 34px; }
-  .wordmark__name { font-size: 12px; }
   .menu-toggle { width: 42px; height: 42px; border: 1px solid var(--line); background: transparent; display: grid; place-content: center; gap: 5px; cursor: pointer; }
   .menu-toggle span { display: block; width: 17px; height: 1px; background: var(--ink); transition: transform .2s ease; }
   .menu-toggle[aria-expanded="true"] span:first-child { transform: translateY(3px) rotate(45deg); }
@@ -197,3 +192,6 @@ button { color: inherit; font: inherit; }
   .music .section-heading__aside { margin-top: 12px; }
   .music .media-gallery { display: grid; grid-template-columns: 1fr; gap: 24px; margin: 0; padding: 0; overflow: visible; }
 }
+
+.wordmark__logo { display: block; width: 116px; height: auto; }
+@media (max-width: 620px) { .wordmark__logo { width: 94px; } }
