@@ -193,8 +193,8 @@ button { color: inherit; font: inherit; }
   .music .media-gallery { display: grid; grid-template-columns: 1fr; gap: 24px; margin: 0; padding: 0; overflow: visible; }
 }
 
-.wordmark__logo { display: block; width: 116px; height: auto; }
-@media (max-width: 620px) { .wordmark__logo { width: 94px; } }
+.wordmark__logo { display: block; width: 116px; height: 42px; object-fit: contain; }
+@media (max-width: 620px) { .wordmark__logo { width: 94px; height: 34px; } }
 
 .hero__ticker { min-width: 0; gap: 16px; align-items: start; }
 .hero__ticker-window { min-width: 0; flex: 1; overflow: hidden; }
