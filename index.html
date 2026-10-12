@@ -3,11 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#efe9df">
+    <meta name="theme-color" content="#080808">
     <meta name="description" content="MR, artista de Buenos Aires. Cumbia de la Piola: música para bailar cerca, cantar fuerte y compartir en vivo.">
     <title>Cumbia de la Piola — Cumbia para bailar cerca</title>
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/3.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css">
-    <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/4.0.0/uicons-brands/css/uicons-brands.css">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
     <script src="motion.js" defer></script>
@@ -19,12 +17,12 @@
         <img class="wordmark__logo" src="assets/cumbia-de-la-piola-logo.png" alt="Cumbia de la Piola" width="2048" height="1152">
       </a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Abrir menú">
-        <i class="fi fi-rr-menu-burger menu-icon" aria-hidden="true"></i><i class="fi fi-rr-cross close-icon" aria-hidden="true"></i>
+        <span class="menu-icon" aria-hidden="true">☰</span><span class="close-icon" aria-hidden="true">×</span>
       </button>
       <nav class="primary-nav" id="primary-nav" aria-label="Navegación principal">
         <a href="#musica">Música</a>
         <a href="#contacto">Contacto</a>
-        <a class="nav-social" href="#redes">Redes <span class="fi fi-rr-arrow-up-right" aria-hidden="true"></span></a>
+        <a class="nav-social" href="#redes">Redes <span aria-hidden="true">↗</span></a>
       </nav>
     </header>
 
@@ -33,9 +31,9 @@
         <div class="hero__copy">
           <p class="eyebrow"><span class="eyebrow__dot"></span> Cumbia de la Piola</p>
           <h1 id="hero-title">Que suene<br><span>la piola.</span></h1>
-          <p class="hero__intro">Soy MR, artista de Buenos Aires. Escuchá mis temas y enterate de mis próximos shows.</p>
+          <p class="hero__intro">Soy MR, artista de Buenos Aires. Escuchá la música de Cumbia de la Piola y seguí las novedades.</p>
           <div class="hero__actions">
-            <a class="button button--dark" href="#musica">Escuchar <span class="fi fi-rr-arrow-down icon-diagonal" aria-hidden="true"></span></a>
+            <a class="button button--dark" href="#musica">Escuchar <span aria-hidden="true">↓</span></a>
           </div>
           <p class="hero__note">MR · Cumbia de la Piola · En vivo y sin vueltas</p>
         </div>
@@ -47,18 +45,18 @@
         <div class="hero__ticker"><div class="hero__ticker-window" aria-hidden="true"><div class="hero__ticker-track"><span>LA PISTA ES DE TODOS · CUMBIA DE LA PIOLA · EN VIVO · LA PISTA ES DE TODOS · CUMBIA DE LA PIOLA · EN VIVO · </span><span>LA PISTA ES DE TODOS · CUMBIA DE LA PIOLA · EN VIVO · LA PISTA ES DE TODOS · CUMBIA DE LA PIOLA · EN VIVO · </span></div></div></div>
       </section>
 
-      <section class="featured section-dark" id="musica" aria-label="Video destacado">
+      <section class="featured" id="musica" aria-label="Video destacado">
           <a class="video-banner__player" href="https://www.youtube.com/watch?v=35O9geyC5rw" target="_blank" rel="noopener noreferrer" aria-label="Reproducir el video destacado de Cumbia de la Piola" data-video-play>
             <img src="assets/video-35O9geyC5rw.jpg" alt="Video destacado de Cumbia de la Piola">
             <span class="video-banner__veil" aria-hidden="true"></span>
             <span class="video-banner__meta video-banner__meta--top">CUMBIA DE LA PIOLA <b>·</b> VIDEO OFICIAL</span>
             <span class="video-banner__title">SONIDO<br><strong>DE BARRIO.</strong></span>
-            <span class="video-banner__play" aria-hidden="true"><i class="fi fi-rr-play"></i></span>
-            <span class="video-banner__footer"><span>REPRODUCIR VIDEO</span><span>YOUTUBE <i class="fi fi-brands-youtube" aria-hidden="true"></i></span></span>
+            <span class="video-banner__play" aria-hidden="true"><span></span></span>
+            <span class="video-banner__footer"><span>REPRODUCIR VIDEO</span><span>YOUTUBE</span></span>
           </a>
       </section>
 
-      <section class="music section-dark" id="mas-musica" aria-labelledby="music-title">
+      <section class="music" id="mas-musica" aria-labelledby="music-title">
         <div class="section-heading">
           <h2 id="music-title">Más música<span class="accent">.</span></h2>
           <p class="section-heading__aside">Elegí tu próximo tema.</p>
@@ -66,21 +64,21 @@
         <div class="media-gallery" aria-label="Videos de Cumbia de la Piola">
           <a class="media-card" href="https://www.youtube.com/watch?v=s3OfZD2knlU" target="_blank" rel="noreferrer" aria-label="Ver Camila, video oficial en YouTube (se abre en una pestaña nueva)">
             <img src="assets/video-s3OfZD2knlU.jpg" alt="Camila, video de Cumbia de la Piola">
-            <span>Camila <span class="fi fi-rr-arrow-up-right" aria-hidden="true"></span></span>
+            <span>Camila <span aria-hidden="true">↗</span></span>
           </a>
           <a class="media-card" href="https://www.youtube.com/watch?v=fO5yvNvXgpE" target="_blank" rel="noreferrer" aria-label="Ver No te Enamores, video oficial en YouTube (se abre en una pestaña nueva)">
             <img src="assets/video-fO5yvNvXgpE.jpg" alt="Escena callejera con un perro, imagen del video No te Enamores">
-            <span>No te Enamores <span class="fi fi-rr-arrow-up-right" aria-hidden="true"></span></span>
+            <span>No te Enamores <span aria-hidden="true">↗</span></span>
           </a>
           <a class="media-card" href="https://www.youtube.com/watch?v=sAQRPRWXdw4" target="_blank" rel="noreferrer" aria-label="Ver La verdadera, video oficial en YouTube (se abre en una pestaña nueva)">
             <img src="assets/video-sAQRPRWXdw4.jpg" alt="Retrato de Cumbia de la Piola, imagen del video La verdadera">
-            <span>La verdadera <span class="fi fi-rr-arrow-up-right" aria-hidden="true"></span></span>
+            <span>La verdadera <span aria-hidden="true">↗</span></span>
           </a>
         </div>
         <div class="music-links" aria-label="Encontrame en plataformas">
           <span>También en</span>
-          <a href="https://open.spotify.com/intl-es/artist/4YAz3PiBLC41HkYlWWJaVb?si=zsX-ggneT9a4A0Ns1iNRTA" target="_blank" rel="noreferrer">Spotify <i class="fi fi-brands-spotify" aria-hidden="true"></i></a>
-          <a href="https://www.youtube.com/@CumbiadelaPiola" target="_blank" rel="noreferrer">YouTube <i class="fi fi-brands-youtube" aria-hidden="true"></i></a>
+          <a href="https://open.spotify.com/intl-es/artist/4YAz3PiBLC41HkYlWWJaVb?si=zsX-ggneT9a4A0Ns1iNRTA" target="_blank" rel="noreferrer">Spotify <span aria-hidden="true">↗</span></a>
+          <a href="https://www.youtube.com/@CumbiadelaPiola" target="_blank" rel="noreferrer">YouTube <span aria-hidden="true">↗</span></a>
         </div>
       </section>
 
@@ -91,7 +89,7 @@
           <h2 id="booking-title">¿Armamos<br>la próxima?</h2>
           <p>Festivales, clubes, fiestas y cualquier lugar con ganas de bailar.</p>
         </div>
-        <a class="button button--red" href="mailto:booking@cumbiadelapiola.com?subject=Fechas%20y%20contrataciones">Hablemos <span class="fi fi-rr-arrow-up-right" aria-hidden="true"></span></a>
+        <a class="button button--red" href="mailto:booking@cumbiadelapiola.com?subject=Fechas%20y%20contrataciones">Hablemos <span aria-hidden="true">↗</span></a>
       </section>
     </main>
 
@@ -100,9 +98,9 @@
         <img class="wordmark__logo" src="assets/cumbia-de-la-piola-logo.png" alt="Cumbia de la Piola" width="2048" height="1152">
       </a>
       <div class="social-links" aria-label="Redes y plataformas">
-        <a href="https://www.instagram.com/cumbiadelapiola?stkn=MThoemkzcmhpZjNmaQ==" target="_blank" rel="noreferrer">Instagram <i class="fi fi-brands-instagram" aria-hidden="true"></i></a>
-        <a href="https://www.threads.com/@cumbiadelapiola?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noreferrer">Threads <i class="fi fi-brands-threads" aria-hidden="true"></i></a>
-        <a href="https://www.youtube.com/@CumbiadelaPiola" target="_blank" rel="noreferrer">YouTube <i class="fi fi-brands-youtube" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/cumbiadelapiola?stkn=MThoemkzcmhpZjNmaQ==" target="_blank" rel="noreferrer">Instagram</a>
+        <a href="https://www.threads.com/@cumbiadelapiola?igshid=NTc4MTIwNjQ2YQ==" target="_blank" rel="noreferrer">Threads</a>
+        <a href="https://www.youtube.com/@CumbiadelaPiola" target="_blank" rel="noreferrer">YouTube</a>
 
       </div>
       <span class="copyright">© <span data-year></span> Cumbia de la Piola</span>
